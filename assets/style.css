@@ -49,7 +49,10 @@ body {
 	padding-block: 100px;
 	position: relative;
 }
-
+.carousel-control-prev,
+.carousel-control-next {
+	color: #000;
+}
 .picture.left::before {
 	content: ' ';
 	background-color: #E5975F;
@@ -69,7 +72,7 @@ body {
 
 .picture img {
 	width: 100%;
-
+	height: auto;
 }
 #about-me {
 	flex: 2
@@ -147,7 +150,9 @@ body {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
-
+	font-size: calc(1.375rem + 1.5vw);
+	line-height: 1.2;
+	margin-bottom: .5rem;
 }
 .quote__author {
 	font-family: Spectral;
@@ -188,6 +193,22 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	z-index: 1;
+}
+
+.service__amount {
+	font-size: calc(1.275rem + .3vw);
+	font-weight: 500;
+	line-height: 1.2;
+	margin-bottom: .5rem;
+}
+
+@media all and (min-width: 1200px) {
+	.quote__text {
+		font-size: 2.5rem;
+	}
+	.service__amount {
+		font-size: 1.5rem;
+	}
 }
 
 #contact {
@@ -255,7 +276,7 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me p {
 		width: 100%;
 	}
 }
